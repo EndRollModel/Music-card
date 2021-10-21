@@ -105,7 +105,7 @@ async function getToken(token) {
 async function getNowPlay(tokenBody) {
     let returnObj = {}
     const requestOption = {
-        url: nowPlay_url ,
+        url: nowPlay_url,
         method: 'GET',
         headers: {
             Authorization: `${tokenBody['token_type']} ${tokenBody['access_token']}`,
@@ -176,7 +176,7 @@ async function getRecentlyPlay(tokenBody) {
  * @param url
  * @return {Promise<string>}
  */
-async function imageCompression (url){
+async function imageCompression(url) {
     const requestOption = {
         url: url,
         method: 'GET',
@@ -195,12 +195,12 @@ async function imageCompression (url){
  * @param userData
  * @return {Promise<unknown>}
  */
-function getMusicInfo(userData){
+function getMusicInfo(userData) {
     return new Promise(async (resolve, reject) => {
         const tokenBody = await getToken(userData.data.token);
         Promise.all([getNowPlay(tokenBody), getRecentlyPlay(tokenBody)])
-            .then((value)=>{
-                if(Object.keys(value[0]).length === 0){
+            .then((value) => {
+                if (Object.keys(value[0]).length === 0) {
                     resolve(value[1]);
                 } else {
                     resolve(value[0]);

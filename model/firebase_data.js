@@ -3,7 +3,11 @@ const key = function () {
     try {
         return JSON.parse(Buffer.from(process.env.firebase, "base64").toString('utf-8'));
     } catch (e) {
-        return require(`../${process.env.firebase}`);
+        if (process.env.firebase === undefined) {
+            throw new Error('not set env firebase params or admin.json');
+        } else {
+            return require(`../${process.env.firebase}`);
+        }
     }
 }
 admin.initializeApp({
@@ -13,7 +17,6 @@ const db = admin.firestore();
 let userData = [];
 
 /**
- *
  * @return {Promise<void>}
  * @description
  * collection - user
