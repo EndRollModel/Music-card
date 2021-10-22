@@ -8,10 +8,10 @@
   ],
   "headers": [
     {
-      "source": "/index.js",
+      "source": "/:id*",
       "headers": [
         {
-          "key": "cache-control",
+          "key": "Cache-Control",
           "value": "s-maxage=1"
         }
       ]
