@@ -8,11 +8,11 @@
   ],
   "headers": [
     {
-      "source": "/*",
+      "source": "/(.*)",
       "headers": [
         {
-          "key" : "Cache-Control",
-          "value" : "public, max-age=1, must-revalidate"
+          "key" : "cache-control",
+          "value" : "public, s-maxage=1"
         }
       ]
     }
