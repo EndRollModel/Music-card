@@ -8,7 +8,7 @@
   ],
   "headers": [
     {
-      "source": "/routes/(.*)",
+      "source": "./(.*)",
       "headers": [
         {
           "key": "cache-control",
