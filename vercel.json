@@ -6,6 +6,17 @@
       "use": "@vercel/node"
     }
   ],
+  "headers": [
+    {
+      "source": "/routes/(.*)",
+      "headers": [
+        {
+          "key": "cache-control",
+          "value": "public, s-maxage=1, must-revalidate"
+        }
+      ]
+    }
+  ],
   "routes": [
     {
       "src": "/(.*)",
