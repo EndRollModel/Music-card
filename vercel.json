@@ -8,11 +8,11 @@
   ],
   "headers": [
     {
-      "source": "./(.*)",
+      "source": "/routes/(.*)",
       "headers": [
         {
           "key": "cache-control",
-          "value": "public, s-maxage=1, must-revalidate"
+          "value": "s-maxage=1"
         }
       ]
     }
