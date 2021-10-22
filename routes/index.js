@@ -9,6 +9,7 @@ let spotifyController = require('../controller/spotify_apis');
 
 // test vercel function
 router.get('/developer', async function (req, res) {
+    res.setHeader('cache-control', 'public, s-maxage=1, must-revalidate')
     res.send('welcome use music card');
 });
 

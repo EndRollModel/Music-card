@@ -2,8 +2,14 @@
   "version": 2,
   "builds": [
     {
-      "src": "./bin/www.js",
+      "src": "index.js",
       "use": "@vercel/node"
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/",
+      "destination": "/router/index"
     }
   ],
   "headers": [
@@ -11,8 +17,8 @@
       "source": "/(.*)",
       "headers": [
         {
-          "key" : "cache-control",
-          "value" : "public, s-maxage=1"
+          "key": "cache-control",
+          "value": "public, s-maxage=1"
         }
       ]
     }
