@@ -8,7 +8,16 @@
   ],
   "headers": [
     {
-      "source": "/routes/(.*)",
+      "source": "router/(.*)",
+      "headers": [
+        {
+          "key": "cache-control",
+          "value": "s-maxage=1"
+        }
+      ]
+    },
+    {
+      "source": "views/(.*)",
       "headers": [
         {
           "key": "cache-control",
