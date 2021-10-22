@@ -18,10 +18,15 @@
                 display: flex;
                 flex: 1;
                 margin: 5px;
+                align-content: center;
                 justify-content: center;
                 align-items: center;
                 color: white;
                 font-size: 0.95rem;
+            }
+
+            #item_singer, #item_type, #item_name{
+                text-align: center;
             }
 
             a, a:link, a:visited, a:hover {
@@ -36,13 +41,13 @@
         </style>
         <div id="inputBlock" style="background-color:#191414;" xmlns="http://www.w3.org/1999/xhtml">
             <div class="item" id="item_type" style="font-size: 0.85rem;">
-                <strong><%- package.type %></strong>
+                <strong><![CDATA[<%- package.type %>]]></strong>
             </div>
             <div class="item" id="item_name">
-                <strong><%- package.name %></strong>
+                <strong><![CDATA[<%- package.name %>]]></strong>
             </div>
             <div class="item" id="item_singer" style="font-size: 0.85rem; color: lightgray">
-                <strong><%- package.singer %></strong>
+                <strong><![CDATA[<%- package.singer %>]]></strong>
             </div>
             <img class="item" id="item_image" width="275px" height="275px"
                  src="data:image/png;base64,<%= package.pic %>" alt=""/>
