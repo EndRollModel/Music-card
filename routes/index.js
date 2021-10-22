@@ -7,6 +7,11 @@ let spotifyController = require('../controller/spotify_apis');
     await dbModel.onListenDataBase();
 })();
 
+// test vercel function
+router.get('/developer', async function (req, res) {
+    res.send('welcome use music card');
+});
+
 router.get('/callback', async function (req, res) {
     if (req.query.code === undefined) return res.status(404).send().end();
     const userToken = await spotifyController.getAuthToken(req.query.code);

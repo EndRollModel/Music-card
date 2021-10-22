@@ -1,12 +1,10 @@
-## music card
+## Music card
 
-----
-
+----        
 this project can create spotify api music card 
 
-you can show playing or recently played music on github or webpage
-
-### sample
+you can show playing or recently played music on github or webpage      
+### Sample
 
 --- 
 
@@ -14,18 +12,27 @@ you can show playing or recently played music on github or webpage
 
 ----
 
+### project used
+[Spotify api](https://developer.spotify.com/)
+
+[Firebase Cloud Firestore](https://firebase.google.com/)
+
 ### How to build
 
-clone or download this project 
-
-open cmd cd this project 
-``` npm i ```
-
-create .env file & write params 
+1. clone or download this project   
+2. open cmd cd this project (need install nodejs & npm)     
+3. install module      
+``` shell
+npm i 
 ```
+4. create .env file & write params      
+``` text
 projectID= // spotify project ID
 redirect_uri= // spotify redirect_uri
 firebase= // firebase admin.json info to base64 or admin.json path (Ex: key/admin.json) 
 basicToken= // spotify (client_id:client_secret) to base64
 ```
-
+5. start server     
+```shell
+npm start 
+```
