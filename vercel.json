@@ -5,16 +5,5 @@
       "src": "./index.js",
       "use": "@vercel/node"
     }
-  ],
-  "headers": [
-    {
-      "source": "/(.*)",
-      "headers": [
-        {
-          "key" : "cache-control",
-          "value" : "public, s-maxage=1"
-        }
-      ]
-    }
   ]
 }
