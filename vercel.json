@@ -8,13 +8,13 @@
   ],
   "rewrites": [
     {
-      "source": "/",
+      "source": "/api",
       "destination": "/router/index"
     }
   ],
   "headers": [
     {
-      "source": "/(.*)",
+      "source": "api/(.*)",
       "headers": [
         {
           "key": "cache-control",
@@ -24,15 +24,6 @@
     },
     {
       "source": "/",
-      "headers": [
-        {
-          "key": "cache-control",
-          "value": "public, s-maxage=1"
-        }
-      ]
-    },
-    {
-      "source": "/(?*)",
       "headers": [
         {
           "key": "cache-control",
