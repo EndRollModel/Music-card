@@ -23,7 +23,7 @@
       ]
     },
     {
-      "source": "/(.*)",
+      "source": "(.*)",
       "headers": [
         {
           "key": "cache-control",
