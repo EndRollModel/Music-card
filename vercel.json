@@ -6,15 +6,9 @@
       "use": "@vercel/node"
     }
   ],
-  "rewrites": [
-    {
-      "source": "/api/(.*)",
-      "destination": "/api"
-    }
-  ],
   "headers": [
     {
-      "source": "api/(.*)",
+      "source": "(.*)",
       "headers": [
         {
           "key": "cache-control",
@@ -23,7 +17,13 @@
       ]
     },
     {
-      "source": "(.*)",
+      "source": ":id*",
+      "has": [
+        {
+          "type": "query",
+          "key": "id"
+        }
+      ],
       "headers": [
         {
           "key": "cache-control",
