@@ -17,7 +17,7 @@
       ]
     },
     {
-      "source": ":id*",
+      "source": "/:id*",
       "has": [
         {
           "type": "query",
