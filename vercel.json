@@ -8,8 +8,8 @@
   ],
   "rewrites": [
     {
-      "source": "/api",
-      "destination": "/router/index"
+      "source": "/api/(*.)",
+      "destination": "/router"
     }
   ],
   "headers": [
