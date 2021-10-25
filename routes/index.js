@@ -47,7 +47,7 @@ router.get('/', async function (req, res) {
                     // res.setHeader('Cache-Control', 'public,s-maxage=1,must-revalidate')
                     // res.setHeader('Cache-Control', 's-maxage=1')
                     // res.setHeader('Cache-Control', 'max-age=1')
-                    res.setHeader('Cache-Control', 'public,max-age=10,must-revalidate')
+                    res.setHeader('Cache-Control', 'public,max-age=3,must-revalidate')
                     return res.render('card', {package: musicCard});
                 } else {
                     res.setHeader('content-type', 'text/json')
