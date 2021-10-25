@@ -17,13 +17,7 @@
       ]
     },
     {
-      "source": "/:id*",
-      "has": [
-        {
-          "type": "query",
-          "key": "id"
-        }
-      ],
+      "source": ":id*",
       "headers": [
         {
           "key": "cache-control",
