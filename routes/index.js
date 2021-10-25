@@ -45,7 +45,7 @@ router.get('/', async function (req, res) {
                 if (req.query.id !== undefined) {
                     res.setHeader('content-type', 'image/svg+xml')
                     // res.setHeader('Cache-Control', 'public, s-maxage=1, must-revalidate')
-                    // res.setHeader('Cache-Control', 's-maxage=1')
+                    res.setHeader('Cache-Control', 'public, s-maxage=1')
                     // res.setHeader('cache-control', 'public, max-age=1, must-revalidate')
                     return res.render('card', {package: musicCard});
                 } else {
