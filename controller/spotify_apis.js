@@ -3,7 +3,7 @@ const sharp = require('sharp');
 /** -----spotify api url----- */
 let userInfo_url = 'https://api.spotify.com/v1/me';
 let token_url = 'https://accounts.spotify.com/api/token';
-let nowPlay_url = 'https://api.spotify.com/v1/me/player/currently-playing';
+let nowPlay_url = 'https://api.spotify.com/v1/me/player/currently-playing?additional_types=track,episode';
 let recently_url = 'https://api.spotify.com/v1/me/player/recently-played';
 // scopes option
 // 根據需求可以要求使用範圍 詳細可查 : https://developer.spotify.com/documentation/general/guides/scopes/
@@ -50,8 +50,7 @@ function createUrl() {
     }
     const params = new URLSearchParams(param)
     return `${authUrl}?${params.toString()}`;
-    // Logger.log(authUrl.addQuery(param));
-    // return authUrl.addQuery(param)
+
 }
 
 /**
@@ -197,6 +196,7 @@ async function imageCompression(url) {
  */
 function getMusicInfo(userData) {
     return new Promise(async (resolve, reject) => {
+        console.log(userData)
         const tokenBody = await getToken(userData.data.token);
         Promise.all([getNowPlay(tokenBody), getRecentlyPlay(tokenBody)])
             .then((value) => {

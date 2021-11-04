@@ -32,7 +32,7 @@ async function getDataBaseFirst() {
     userData = usersInfo;
 }
 
-/** 監聽狀態 **/
+/** 監聽狀態(若使用vercel 則不使用此方法) **/
 async function onListenDataBase() {
     console.log(`::::: server data onListen start :::::`)
     db.collection('user').onSnapshot((dataStatus) => {
@@ -66,6 +66,16 @@ async function onListenDataBase() {
     });
 }
 
+async function searchUser(id){
+    const userData = await db.collection('user').doc(id).get();
+    console.log(userData.data());
+    if (userData.data() !== undefined) {
+        return {data: {token: userData.data().token}};
+    }else {
+        return undefined;
+    }
+}
+
 function userIsExists(id){
     return userData.findIndex(elem => elem.id === id) !== -1;
 }
@@ -91,15 +101,8 @@ async function addUserData(id, token, displayName) {
     return id;
 }
 
-/**
- * update user option
- * @return {Promise<void>}
- */
-async function updateUserData() {
-
-}
-
 module.exports = {
+    searchUser,
     getUserInfo,
     userIsExists,
     addUserData,

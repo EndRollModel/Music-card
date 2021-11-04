@@ -25,8 +25,18 @@
                 font-size: 0.95rem;
             }
 
-            #item_singer, #item_type, #item_name{
+            #item_singer, #item_type{
                 text-align: center;
+            }
+
+            #item_name{
+                text-align: center;
+                width: 100%;
+                /*animation: marquee 10s linear infinite;*/
+            }
+            @keyframes marquee {
+                0%   { transform: translate(100%, 0%); }
+                100% { transform: translate(-100%, 0); }
             }
 
             a, a:link, a:visited, a:hover {
