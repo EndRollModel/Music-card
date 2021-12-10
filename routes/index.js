@@ -36,8 +36,8 @@ router.get('/', async function (req, res) {
                 const musicCard = await spotifyController.getMusicInfo(userdata);
                 if (req.query.id !== undefined) {
                     res.setHeader('content-type', 'image/svg+xml')
-                    res.setHeader('Cache-Control', 'public,max-age=3,must-revalidate')
-                    return res.render('card', {package: musicCard});
+                    res.setHeader('Cache-Control', 'public,max-age=5,must-revalidate')
+                    return res.render('flexCard', {package: musicCard});
                 } else {
                     res.setHeader('content-type', 'text/json')
                     return res.send(JSON.stringify(musicCard))

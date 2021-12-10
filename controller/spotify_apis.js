@@ -182,11 +182,13 @@ async function imageCompression(url) {
         responseType: 'arraybuffer',
     }
     const image = await axios(requestOption);
-    const buffer = await sharp(image.data)
-        .jpeg({quality: 70, mozjpeg: true})
-        // .jpeg()
-        .toBuffer()
-    return Buffer.from(buffer).toString('base64');
+    // 方法一 直接回傳不壓縮
+    return Buffer.from(image.data).toString('base64')
+    // 方法二 壓縮後回傳
+    // const buffer = await sharp(image.data)
+    //     .jpeg({quality: 70, mozjpeg: true})
+    //     .toBuffer()
+    // return Buffer.from(buffer).toString('base64');
 }
 
 /**
