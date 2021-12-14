@@ -63,7 +63,7 @@ router.get('/api/', async function (req, res) {
                 if (req.query.id !== undefined) {
                     res.setHeader('content-type', 'image/svg+xml')
                     res.setHeader('Cache-Control', 'public,max-age=5,must-revalidate')
-                    return res.render('flexCard', {package: smallCard});
+                    return res.render('smallCard', {package: musicCard});
                 } else {
                     res.setHeader('content-type', 'text/json')
                     return res.send(JSON.stringify(musicCard))
