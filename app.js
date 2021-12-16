@@ -6,6 +6,7 @@ let cookieParser = require('cookie-parser');
 let logger = require('morgan');
 
 let indexRouter = require('./routes/index');
+let apisRouter = require('./routes/apis');
 let app = express();
 
 // if (process.env.userVercel !== true) {
@@ -28,6 +29,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
+app.use('/apis/', apisRouter)
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

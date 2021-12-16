@@ -1,15 +1,18 @@
 ## Music card
 
 ----        
-this project can create spotify api music card 
+This project can create spotify api music card 
 
-you can show playing or recently played music on github or webpage      
+you can show Playing or Recently played music on Github or Webpage
+
 ### Sample
 
 --- 
-
+Normal
 <img src="https://raw.githubusercontent.com/EndRollModel/Music-card/master/sample/sample.svg" alt="this is sample">
 
+Small
+<img src="https://raw.githubusercontent.com/EndRollModel/Music-card/master/sample/smapleSmall.svg" alt="this is small sample">
 ----
 
 ### project used

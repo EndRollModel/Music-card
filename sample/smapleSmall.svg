@@ -2,102 +2,102 @@
     <foreignObject height="120px" width="360px">
         <style>
             div {
-                font-family: -apple-system, BlinkMacSystemFont, "微軟正黑體", "Microsoft JhengHei", Segoe UI, Arial, Helvetica, sans-serif
+            font-family: -apple-system, BlinkMacSystemFont, "微軟正黑體", "Microsoft JhengHei", Segoe UI, Arial, Helvetica, sans-serif
             }
 
             .box {
-                background-color: #191414;
-                width: 360px;
-                height: 120px;
-                display: flex;
-                flex-direction: row;
-                border-radius: 40px 10px;
-                /*box-shadow: 10px 10px 30px 15px lightgray;*/
+            background-color: #191414;
+            width: 360px;
+            height: 120px;
+            display: flex;
+            flex-direction: row;
+            border-radius: 40px 10px;
+            /*box-shadow: 10px 10px 30px 15px lightgray;*/
             }
 
             .title {
-                width: 250px;
-                display: flex;
-                flex-direction: column;
-                flex-wrap: nowrap;
-                justify-content: center;
-                font-size: 1rem;
-                text-align: center;
-                align-items: center;
-                color: white;
+            width: 250px;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            justify-content: center;
+            font-size: 1rem;
+            text-align: center;
+            align-items: center;
+            color: white;
             }
 
             #singer {
-                font-size: 0.75rem;
-                color: lightgray;
-                margin: 5px;
+            font-size: 0.75rem;
+            color: lightgray;
+            margin: 5px;
             }
 
             #name {
-                width: 280px;
-                margin: 5px;
-                display: -webkit-box;
-                -webkit-line-clamp: 1;
-                -webkit-box-orient: vertical;
-                overflow: hidden;
-                text-overflow: ellipsis;
+            width: 280px;
+            margin: 5px;
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
             }
 
             .picBox {
-                margin-left: 20px;
-                padding-right: 15px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
+            margin-left: 20px;
+            padding-right: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             }
 
             #pic {
-                animation: scale-style 0.8s linear infinite normal forwards;
-                border-radius: 50%;
-                width: 70px;
-                height: 70px;
-                background-color: white;
+            animation: scale-style 0.8s linear infinite normal forwards;
+            border-radius: 50%;
+            width: 70px;
+            height: 70px;
+            background-color: white;
             }
 
             #voice{
-                width: 105px;
-                height: 105px;
-                position: absolute;
+            width: 105px;
+            height: 105px;
+            position: absolute;
             }
 
             @keyframes scale-style {
-                0% {
-                    transform: scale(0.9);
-                }
-                60% {
-                    transform: scale(0.85);
-                }
-                85% {
-                    transform: scale(1);
-                }
-                100% {
-                    transform: scale(0.9);
-                }
+            0% {
+            transform: scale(0.9);
+            }
+            60% {
+            transform: scale(0.85);
+            }
+            85% {
+            transform: scale(1);
+            }
+            100% {
+            transform: scale(0.9);
+            }
             }
 
             .link {
-                width: 280px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                font-size: 0.7rem;
-                margin: 10px;
+            width: 280px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 0.7rem;
+            margin: 10px;
             }
 
             .link > a > img {
-                width: 20px;
-                height: 20px;
+            width: 20px;
+            height: 20px;
             }
 
             a, a:link, a:visited, a:hover {
-                color: #1db954;
-                text-decoration: none;
-                align-content: center;
+            color: #1db954;
+            text-decoration: none;
+            align-content: center;
             }
         </style>
 
@@ -105,27 +105,27 @@
             <div class="picBox">
                 <svg id="voice" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                     　　<circle cx="52" cy="52" r="0" stroke="white" stroke-width="3.5" fill-opacity="0">
-                        　　　　<animate attributeName="r" id="ani1" begin="0" from="0" to="50" dur="2s" repeatCount="indefinite"></animate>
-                        　　　　<animate attributeName="opacity" begin="0" from="1" to="0" dur="2s" repeatCount="indefinite"></animate>
-                        　　</circle>
+                    　　　　<animate attributeName="r" id="ani1" begin="0" from="0" to="50" dur="2s" repeatCount="indefinite"></animate>
+                    　　　　<animate attributeName="opacity" begin="0" from="1" to="0" dur="2s" repeatCount="indefinite"></animate>
+                    　　</circle>
                     　　<circle cx="52" cy="52" r="0" stroke="white" stroke-width="3.5" fill-opacity="0">
-                        　　　　<animate attributeName="r" begin="ani1.begin + 0.5s" from="0" to="50" dur="2s" repeatCount="indefinite"></animate>
-                        　　　　<animate attributeName="opacity" begin="ani1.begin + 0.5s" from="1" to="0" dur="2s" repeatCount="indefinite"></animate>
-                        　　</circle>
+                    　　　　<animate attributeName="r" begin="ani1.begin + 0.5s" from="0" to="50" dur="2s" repeatCount="indefinite"></animate>
+                    　　　　<animate attributeName="opacity" begin="ani1.begin + 0.5s" from="1" to="0" dur="2s" repeatCount="indefinite"></animate>
+                    　　</circle>
                     　　<circle cx="52" cy="52" r="0" stroke="white" stroke-width="3.5" fill-opacity="0">
-                        　　　　<animate attributeName="r" begin="ani1.begin + 1s" from="0" to="50" dur="2s" repeatCount="indefinite"></animate>
-                        　　　　<animate attributeName="opacity" begin="ani1.begin + 1s" from="1" to="0" dur="2s" repeatCount="indefinite"></animate>
-                        　　</circle>
+                    　　　　<animate attributeName="r" begin="ani1.begin + 1s" from="0" to="50" dur="2s" repeatCount="indefinite"></animate>
+                    　　　　<animate attributeName="opacity" begin="ani1.begin + 1s" from="1" to="0" dur="2s" repeatCount="indefinite"></animate>
+                    　　</circle>
                 </svg>
                 <img id="pic"
                      src="data:image/png;base64,<%= package.pic %>" alt=""/>
             </div>
             <div class="title">
                 <div id="name">
-                    <strong>優しい彗星</strong>
+                    <strong><![CDATA[<%- package.name %>]]></strong>
                 </div>
                 <div id="singer">
-                    <strong>YOASOBI</strong>
+                    <strong><![CDATA[<%- package.singer %>]]></strong>
                 </div>
                 <div class="link">
                     <a href="<%- package.openurl %>">
