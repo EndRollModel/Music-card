@@ -8,10 +8,10 @@ you can show Playing or Recently played music on Github or Webpage
 ### Sample
 
 --- 
-Normal
+Normal      
 <img src="https://raw.githubusercontent.com/EndRollModel/Music-card/master/sample/sample.svg" alt="this is sample">
-
-Small
+            
+Small       
 <img src="https://raw.githubusercontent.com/EndRollModel/Music-card/master/sample/smapleSmall.svg" alt="this is small sample">
 ----
 
