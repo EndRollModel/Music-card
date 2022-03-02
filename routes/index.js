@@ -2,6 +2,7 @@ let express = require('express');
 let router = express.Router();
 let dbModel = require('../model/firebase_data');
 let spotifyController = require('../controller/spotify_apis');
+let font = require('../model/font')
 
 router.get('/callback', async function (req, res) {
     if (req.query.code === undefined) return res.status(404).send().end();
@@ -34,6 +35,7 @@ router.get('/', async function (req, res) {
             const userdata = await dbModel.searchUser(id);
             if (userdata !== undefined) {
                 const musicCard = await spotifyController.getMusicInfo(userdata);
+                musicCard.font = font;
                 if (req.query.id !== undefined) {
                     res.setHeader('content-type', 'image/svg+xml')
                     res.setHeader('Cache-Control', 'public,max-age=5,must-revalidate')
