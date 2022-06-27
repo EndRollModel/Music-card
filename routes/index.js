@@ -10,8 +10,8 @@ router.get('/callback', async function (req, res) {
     if (!userToken.hasOwnProperty('error')) {
         const userInfo = await spotifyController.getUserID(userToken);
         try {
-            const userData = await dbModel.userIsExists(userInfo.id);
-            if (userData !== undefined) {
+            const userData = dbModel.userIsExists(userInfo.id);
+            if (userData) {
                 res.send(`users is exists Url : \n${req.protocol + '://' + req.get('host') + `?id=${userInfo.id}`}`);
             } else {
                 await dbModel.addUserData(userInfo['id'], userToken['refresh_token'], userInfo['display_name']);
