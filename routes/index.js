@@ -35,7 +35,8 @@ router.get('/', async function (req, res) {
             const userdata = await dbModel.searchUser(id);
             if (userdata !== undefined) {
                 const musicCard = await spotifyController.getMusicInfo(userdata);
-                musicCard.font = font;
+                const fontBase = `data:font-woff2;base64,${require('fs').readFileSync('../public/font/Cubic11.woff2').toString('base64')}`;
+                musicCard.font = fontBase;
                 if (req.query.id !== undefined) {
                     res.setHeader('content-type', 'image/svg+xml')
                     res.setHeader('Cache-Control', 'public,max-age=5,must-revalidate')
